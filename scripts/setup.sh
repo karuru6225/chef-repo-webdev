@@ -2,7 +2,7 @@
 
 #以下のコマンドで実行する
 #ワンライナー
-#curl -kL https://raw.github.com/karuru6225/chef-repo-base/master/scripts/setup.sh | bash && . /etc/profile.d/rbenv.sh && git clone https://github.com/karuru6225/chef-repo-base.git && cd chef-repo-base && ./scripts/prepare.sh
+#curl -kL https://raw.github.com/karuru6225/chef-repo-base/master/scripts/setup.sh | bash && . /etc/profile.d/rbenv.sh
 
 set -e
 
@@ -68,7 +68,10 @@ if ! type chef-solo >/dev/null 2>&1; then
 	curl -L https://www.opscode.com/chef/install.sh | bash	
 fi
 
-cd `dirname $0`; cd ../
+git clone https://github.com/karuru6225/chef-repo-base.git
+cd chef-repo-base
+
+rbenv rehash
 bundle config --local build.nokogiri --use-system-libraries
 
 bundle install --path ./.bundle/gems --binstubs ./.bundle/bin
