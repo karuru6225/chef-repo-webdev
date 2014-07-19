@@ -28,6 +28,7 @@ elif [ "${OS}" == "debian" ]; then
 	apt-get -y install git build-essential libssl-dev libreadline5-dev
 fi
 
+BASEDIR=`pwd`
 cd /usr/local/
 rm -rf rbenv
 git clone git://github.com/sstephenson/rbenv.git rbenv
@@ -68,8 +69,21 @@ if ! type chef-solo >/dev/null 2>&1; then
 	curl -L https://www.opscode.com/chef/install.sh | bash	
 fi
 
+cd ${BASEDIR}
+
 git clone https://github.com/karuru6225/chef-repo-base.git
 cd chef-repo-base
+
+BASEDIR=`pwd`
+
+OUTPUT_SOLO=${BASEDIR}/solo.rb
+[ -d /tmp/chef-solo ] || mkdir -p /tmp/chef-solo
+cat<<EOF>$OUTPUT_SOLO
+file_cache_path "/tmp/chef-solo"
+cookbook_path "${BASEDIR}/cookbooks"
+data_bag_path "${BASEDIR}/data_bags"
+role_path "${BASEDIR}/roles"
+EOF
 
 rbenv rehash
 bundle config --local build.nokogiri --use-system-libraries
