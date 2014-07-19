@@ -2,7 +2,7 @@
 
 #以下のコマンドで実行する
 #ワンライナー
-#curl -kL https://raw.github.com/karuru6225/chef-repo-skeleton/master/scripts/setup.sh | bash && . /etc/profile.d/rbenv.sh && git clone https://github.com/karuru6225/chef-repo-skeleton.git && cd chef-repo-skeleton && ./scripts/prepare.sh
+#curl -kL https://raw.github.com/karuru6225/chef-repo-base/master/scripts/setup.sh | bash && . /etc/profile.d/rbenv.sh && git clone https://github.com/karuru6225/chef-repo-base.git && cd chef-repo-base && ./scripts/prepare.sh
 
 set -e
 
