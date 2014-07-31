@@ -11,6 +11,8 @@ if [ -f /etc/redhat-release ]; then
 	if [[ "${UNAME}" =~ .*CentOS.* ]];then
 		OS="centos"
 	fi
+elif [ -f /etc/lsb-release ]; then
+	OS="ubuntu"
 elif [ -f /etc/debian_version ]; then
 	OS="debian"
 else
@@ -26,6 +28,8 @@ if [ "${OS}" == "centos" ]; then
 	yum -y install libxml2-devel.x86_64 libxslt-devel.x86_64
 elif [ "${OS}" == "debian" ]; then
 	apt-get -y install git build-essential libssl-dev
+elif [ "${OS}" == "ubuntu"]; then
+	apt-get -y install git build-essential
 fi
 
 BASEDIR=`pwd`
