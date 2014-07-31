@@ -25,7 +25,7 @@ if [ "${OS}" == "centos" ]; then
 	# berkshelf用
 	yum -y install libxml2-devel.x86_64 libxslt-devel.x86_64
 elif [ "${OS}" == "debian" ]; then
-	apt-get -y install git build-essential libssl-dev libreadline5-dev
+	apt-get -y install git build-essential libssl-dev
 fi
 
 BASEDIR=`pwd`
