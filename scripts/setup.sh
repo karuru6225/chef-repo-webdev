@@ -29,7 +29,7 @@ if [ "${OS}" == "centos" ]; then
 elif [ "${OS}" == "debian" ]; then
 	apt-get -y install git build-essential libssl-dev
 elif [ "${OS}" == "ubuntu" ]; then
-	apt-get -y install git build-essential
+	apt-get -y install git build-essential libssl-dev
 fi
 
 BASEDIR=`pwd`
