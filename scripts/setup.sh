@@ -28,7 +28,7 @@ if [ "${OS}" == "centos" ]; then
 	yum -y install libxml2-devel.x86_64 libxslt-devel.x86_64
 elif [ "${OS}" == "debian" ]; then
 	apt-get -y install git build-essential libssl-dev
-elif [ "${OS}" == "ubuntu"]; then
+elif [ "${OS}" == "ubuntu" ]; then
 	apt-get -y install git build-essential
 fi
 
