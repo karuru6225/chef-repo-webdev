@@ -82,7 +82,7 @@ if ! type chef-solo >/dev/null 2>&1; then
 fi
 
 cd ${BASEDIR}
-
+rm -rf chef-repo-base
 git clone https://github.com/karuru6225/chef-repo-base.git
 cd chef-repo-base
 
