@@ -33,6 +33,9 @@ elif [ "${OS}" == "ubuntu" ]; then
 fi
 
 BASEDIR=`pwd`
+
+if ! type rbenv >/dev/null 2>&1; then
+
 cd /usr/local/
 rm -rf rbenv
 git clone git://github.com/sstephenson/rbenv.git rbenv
@@ -63,9 +66,14 @@ chmod -R g+rwxs ruby-build
 git clone https://github.com/ianheggie/rbenv-binstubs.git 
 chgrp -R rbadmin rbenv-binstubs
 chmod -R g+rwxs rbenv-binstubs
+fi
 
 VERSION=`rbenv install -l | awk '{ print $1 }' | grep ^2 | grep -v '\(-rc\|-dev\|preview\)' | tail -n 1`
+
+if [ "`rbenv versions | grep ${VERSIONS`" = "" ];then
 rbenv install ${VERSION}
+fi
+
 rbenv global ${VERSION}
 gem install bundler --no-rdoc --no-ri
 
@@ -90,7 +98,7 @@ role_path "${BASEDIR}/roles"
 EOF
 
 rbenv rehash
-bundle config --local build.nokogiri --use-system-libraries
+#bundle config --local build.nokogiri --use-system-libraries
 
 bundle install --path ./.bundle/gems --binstubs ./.bundle/bin
 rbenv rehash
