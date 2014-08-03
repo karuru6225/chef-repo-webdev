@@ -70,7 +70,7 @@ fi
 
 VERSION=`rbenv install -l | awk '{ print $1 }' | grep ^2 | grep -v '\(-rc\|-dev\|preview\)' | tail -n 1`
 
-if [ "`rbenv versions | grep '${VERSIONS}'`" = "" ];then
+if [ "`rbenv versions | grep \"${VERSIONS}\"`" = "" ];then
 rbenv install ${VERSION}
 fi
 
