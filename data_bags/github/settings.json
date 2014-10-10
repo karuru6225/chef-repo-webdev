@@ -1,0 +1,15 @@
+{
+  "id": "settings",
+  "filename": {
+    "encrypted_data": "RrgWOEvgehS71VKIw6qOCyqCUSJSUWi+mWIVIQWBh3KGAS5prWf3snYtoOqA\njg8e\n",
+    "iv": "DXR7hk6jUTOxzfo/2R0gmA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "key_url": {
+    "encrypted_data": "9Yq76Fsxo0xqIf99zfSliC6jg4pfwit9lxyyn3ISmKtvTtjocR5/TCdRt/m6\neVB3OK4rr47QWtb/NhDDJjkiDfhKkSzsjfvN59QJWxHdvZ+40UR2S+VvrHrv\nt6uISlkY\n",
+    "iv": "x3luTUMoLiMauFK6XMvkFQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

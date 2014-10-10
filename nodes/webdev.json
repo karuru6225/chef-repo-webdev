@@ -5,6 +5,7 @@
 		"recipe[bash]",
 		"recipe[vim]",
 		"recipe[users]",
-		"recipe[tmux]"
+		"recipe[tmux]",
+		"recipe[github]"
 	]
 }

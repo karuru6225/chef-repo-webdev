@@ -9,3 +9,4 @@ cookbook 'tmux', git: 'https://github.com/karuru6225/cookbook-tmux.git'
 cookbook 'users', git: 'https://github.com/karuru6225/cookbook-users.git'
 cookbook 'ssh', git: 'https://github.com/karuru6225/cookbook-ssh.git'
 
+cookbook 'github', git: 'https://github.com/karuru6225/cookbook-github.git'
