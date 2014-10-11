@@ -1,4 +1,7 @@
 {
+	"nodejs" : {
+		"version": "0.10.32"
+	},
 	"run_list" : [
 		"recipe[ssh]",
 		"recipe[basic-packages]",
@@ -6,6 +9,7 @@
 		"recipe[vim]",
 		"recipe[users]",
 		"recipe[tmux]",
-		"recipe[github]"
+		"recipe[github]",
+		"recipe[nodejs]"
 	]
 }
