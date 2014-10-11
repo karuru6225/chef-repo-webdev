@@ -2,7 +2,7 @@
 
 #以下のコマンドで実行する
 #ワンライナー
-#curl -kL https://raw.github.com/karuru6225/chef-repo-base/master/scripts/setup.sh | bash && . /etc/profile.d/rbenv.sh
+#curl -kL https://raw.github.com/karuru6225/chef-repo-webdev/master/scripts/setup.sh | bash && . /etc/profile.d/rbenv.sh
 
 set -e
 
@@ -84,9 +84,9 @@ if ! type chef-solo >/dev/null 2>&1; then
 fi
 
 cd ${BASEDIR}
-rm -rf chef-repo-base
-git clone https://github.com/karuru6225/chef-repo-base.git
-cd chef-repo-base
+rm -rf chef-repo-webdev
+git clone https://github.com/karuru6225/chef-repo-webdev.git
+cd chef-repo-webdev
 
 BASEDIR=`pwd`
 
